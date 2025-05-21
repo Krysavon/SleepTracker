@@ -1,0 +1,77 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:id="@+id/rju3itei5wf"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/rstym4vqjltr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginStart="22dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/backButtonPolicy"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_left"
+                    android:contentDescription="Back button policy"
+                    android:clickable="true"
+                    android:focusable="true" />
+                <TextView
+                    android:id="@+id/rqvkrhlrkbz"
+                    android:textColor="#3E97F1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Политика конфиденциальности"
+                    />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/rrd6fxqciwo"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginHorizontal="22dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:text="Дата вступления в силу: 08.04.2025 Последнее обновление: 08.04.2025\n1. Общие положения\nНастоящая Политика конфиденциальности регулирует порядок обработки и защиты персональных данных пользователей приложения [название приложения] (далее — «Приложение»), устанавливается администрацией Приложения в соответствии с требованиями законодательства.\n2. Сбор и обработка данных\nМы собираем следующие категории информации:\nТехнические данные: тип устройства, операционная система, язык, версия приложения и др.\nДанные сна: время отхода ко сну, время пробуждения, продолжительность сна, качество сна, данные от акселерометра (если применимо).\nДобровольно предоставленные данные: имя (псевдоним), возраст, пол и др. — только по желанию пользователя.\nМы не собираем биометрические данные, геолокацию или информацию, не относящуюся к функционалу трекера сна.\n3. Цели сбора данных\nСобранные данные используются для:\nанализа и визуализации режима сна пользователя;\nпредоставления рекомендаций по улучшению сна;\nулучшения качества работы Приложения;\nтехнической поддержки.\n4. Хранение и защита информации\nВсе данные хранятся локально на устройстве пользователя или на защищённом сервере (если предусмотрена синхронизация). Мы применяем стандартные меры защиты данных от несанкционированного доступа.\n5. Передача данных третьим лицам\nМы не передаём и не продаём персональные данные третьим лицам без согласия пользователя, за исключением случаев, предусмотренных законодательством.\n6. Права пользователя\nПользователь имеет право:\nзапрашивать удаление или изменение своих данных;\nотключать сбор определённых данных в настройках приложения;\nполучать информацию о хранимых данных.\n7. Изменения политики\nМы можем вносить изменения в данную Политику. Все обновления будут опубликованы в приложении. Использование приложения после обновления политики означает согласие с изменениями."
+                />
+            <LinearLayout
+                android:id="@+id/rdf2lv9fxt8o"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="1dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/rmz9ha71l9qo"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFF2F4"
+                    android:layout_marginBottom="3dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

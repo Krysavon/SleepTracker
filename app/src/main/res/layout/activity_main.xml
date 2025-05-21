@@ -1,0 +1,485 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок -->
+            <TextView
+                android:text="Sleep tracker"
+                android:textColor="#3E97F1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginStart="19dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- Блок информации о сне -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/cr12be4e4e4"
+                android:layout_marginHorizontal="19dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp"
+                android:elevation="4dp">
+
+                <!-- Иконка + длительность сна -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="49dp"
+                        android:layout_height="48dp"
+                        android:layout_marginEnd="17dp"
+                        android:src="@drawable/moon"
+                        android:scaleType="fitXY"
+                        app:shapeAppearanceOverlay="@style/cr12" />
+
+                    <TextView
+                        android:id="@+id/sleepDurationText1"
+                        android:text="06 ч 25 мин"
+                        android:textColor="#111416"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <!-- Сравнение со средним -->
+                <TextView
+                    android:id="@+id/sleepComparisonText"
+                    android:text="На 20% меньше чем обычно"
+                    android:textColor="#54575A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!-- Время сна (левая и правая стороны) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="23dp">
+
+                    <TextView
+                        android:id="@+id/sleepStartTime"
+                        android:text="Время засыпания 01:14"
+                        android:textColor="#54575A"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/sleepEndTime"
+                        android:text="Время пробуждения 07:39"
+                        android:textColor="#54575A"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Карточка: параметры сна -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@drawable/cr12beff2f4"
+                            android:elevation="4dp"
+                            android:padding="16dp"
+                            android:layout_marginBottom="1dp">
+
+                            <!-- Заголовок + иконка -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/sleep"
+                                    app:shapeAppearanceOverlay="@style/cr12" />
+
+                                <TextView
+                                    android:text="Параметры сна"
+                                    android:textColor="#000000"
+                                    android:textSize="20sp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <!-- Линия графика сна -->
+                            <FrameLayout
+                                android:id="@+id/sleepGraphContainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="24dp"
+                                android:layout_marginVertical="8dp"
+                                android:background="#DDD" >  <!-- светло-серый фон как шкала -->
+
+                                <!-- Ползунок сна -->
+                                <View
+                                    android:id="@+id/sleepGraphBar"
+                                    android:layout_height="match_parent"
+                                    android:layout_width="0dp"
+                                    android:background="@drawable/sleep_gradient"
+                                    android:layout_gravity="start" />
+                            </FrameLayout>
+                            <!-- Временные метки -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="16dp">
+
+                                <TextView
+                                    style="@style/SleepDot"
+                                    android:text="0"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    style="@style/SleepDot"
+                                    android:text="06"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    style="@style/SleepDot"
+                                    android:text="12"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    style="@style/SleepDot"
+                                    android:text="18"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+
+                                <TextView
+                                    style="@style/SleepDot"
+                                    android:text="24"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <!-- Подписи "Ложиться в / Вставать в" -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                android:layout_marginBottom="12dp">
+
+                                <TextView
+                                    android:id="@+id/sleepStartLabel"
+                                    android:text="Ложиться в"
+                                    android:textColor="#54575A"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginEnd="24dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="true"/>
+
+                                <TextView
+                                    android:id="@+id/wakeTimeLabel"
+                                    android:text="Вставать в"
+                                    android:textColor="#54575A"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="true"/>
+                            </LinearLayout>
+                            <!-- Выбор времени сна и подъёма -->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="16dp"
+                                    android:layout_marginEnd="6dp"
+                                    android:src="@drawable/sleep1"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/sleepStartTime1"
+                                    android:text="22:00"
+                                    android:textColor="#111416"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:layout_marginEnd="32dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginEnd="8dp"
+                                    android:src="@drawable/si_sun_duotone"
+                                    android:scaleType="fitXY" />
+
+                                <TextView
+                                    android:id="@+id/wakeTime"
+                                    android:text="06:30"
+                                    android:textColor="#111416"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="true"
+                                    android:focusable="true" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/r5ccm9xnjg7d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cr12beff2f4"
+                android:paddingVertical="11dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="19dp"
+                android:elevation="4dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/rr1334h8gvgo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginStart="12dp"
+                    android:orientation="horizontal">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/r2c7j2wvaxwk"
+                        app:shapeAppearanceOverlay="@style/cr12"
+                        android:layout_width="23dp"
+                        android:layout_height="23dp"
+                        android:layout_marginEnd="7dp"
+                        android:src="@drawable/history"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:id="@+id/rrwmrwlnfvip"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="История сна"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/historyListContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+                <LinearLayout
+                    android:id="@+id/ra5r1c1n9cdg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/rnruwix27rei"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/rywdy6w8nal"
+                            android:textColor="#9A9A9A"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:layout_marginEnd="9dp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="ЕЩЕ"
+                            />
+                        <ImageView
+                            android:id="@+id/r32asokbvjbg"
+                            android:layout_width="8dp"
+                            android:layout_height="4dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/arrow"
+                            android:scaleType="fitXY"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/sleepActionCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/original_background_color"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:id="@+id/sleepToggleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:background="#3E98F1"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/iconSleep"
+                        android:layout_width="47dp"
+                        android:layout_height="41dp"
+                        android:layout_marginEnd="17dp"
+                        android:src="@drawable/moon1"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/sleepButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ложусь спать"
+                        android:textColor="#FFFFFF"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    <!-- Подвал (нижняя навигация) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:paddingVertical="8dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EFF2F4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <!-- Кнопка "Главная" -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/home"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Главная"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Кнопка "Настройки" -->
+            <LinearLayout
+                android:id="@+id/navSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:src="@drawable/settings"
+                    android:scaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Настройки"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+

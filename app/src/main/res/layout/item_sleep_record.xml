@@ -1,0 +1,98 @@
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/cr12be4e4e4"
+        android:padding="10dp"
+        android:layout_marginBottom="12dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:textColor="#3E97F1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="08.04" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="8dp"
+            android:background="#3E97F1" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/sleepDurationTextView"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ночной сон 6ч 25мин" />
+
+            <TextView
+                android:id="@+id/sleepStartTextView"
+                android:textColor="#54575A"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Время засыпания: 01:14" />
+
+            <TextView
+                android:id="@+id/sleepEndTextView"
+                android:textColor="#54575A"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Время пробуждения: 07:39" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:id="@+id/normLabelTextView"
+                    android:textColor="#08B200"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Норма" />
+
+                <ImageView
+                    android:id="@+id/normImageView"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@mipmap/ic_launcher" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/normValueTextView"
+                android:textColor="#777777"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Норма: 6-10ч" />
+        </LinearLayout>
+    </LinearLayout>

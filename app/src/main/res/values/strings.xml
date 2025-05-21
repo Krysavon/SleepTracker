@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Sleep tracker</string>
+    <string name="title_activity_sleep_history">SleepHistoryActivity</string>
+</resources>

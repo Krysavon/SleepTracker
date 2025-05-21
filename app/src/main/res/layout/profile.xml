@@ -1,0 +1,190 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/rp0ve80tuze"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Заголовок "Профиль" -->
+            <LinearLayout
+                android:id="@+id/r0fod5kykp4lf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="47dp"
+                android:layout_marginStart="22dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/backButtonProfile"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/arrow_left"
+                    android:contentDescription="Back button"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/rjy4acrj35wo"
+                    android:textColor="#3E97F1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Профиль"/>
+            </LinearLayout>
+
+            <!-- Аватарка -->
+            <LinearLayout
+                android:id="@+id/rq8v7d9ckp5n"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/rmakf0yw88yf"
+                    android:layout_width="206dp"
+                    android:layout_height="206dp"
+                    android:src="@drawable/avatar"
+                    android:scaleType="fitXY"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editUserName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:text="Иван Иванов"
+                android:textColor="#000000"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName"
+                android:maxLines="1" />
+
+            <LinearLayout
+                android:id="@+id/rrb8wtt5854f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="4dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="356dp"
+                    android:layout_height="63dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/cr12be4e4e4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Вес:"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+
+                    <EditText
+                        android:id="@+id/editWeight"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="76"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="кг"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rrb8wtt5854e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="4dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginStart="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="356dp"
+                    android:layout_height="63dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/cr12be4e4e4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Рост:"
+                        android:layout_marginStart="10dp"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="8dp" />
+
+                    <EditText
+                        android:id="@+id/editHeight"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:text="176"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:background="@android:color/transparent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="см"
+                        android:textColor="#111416"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Разделитель -->
+
+            <!-- Нижняя панель с иконками и текстом -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

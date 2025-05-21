@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/cr5be6e6e6"
+    android:paddingVertical="2dp"
+    android:paddingHorizontal="8dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginHorizontal="7dp"
+    android:orientation="horizontal">
+
+    <!-- Левый блок: длительность и норма -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textDuration"
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="1dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ночной сон 6ч 25мин"/>
+        <TextView
+            android:id="@+id/textNorm"
+            android:textColor="#777"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Норма: 6-10ч"/>
+    </LinearLayout>
+
+    <!-- Оттесняющий Spacer -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Правый блок: статус -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/textStatus"
+            android:textColor="#08B200"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Норма" />
+
+        <ImageView
+            android:id="@+id/imageStatus"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+    </LinearLayout>
+</LinearLayout>
